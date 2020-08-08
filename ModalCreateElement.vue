@@ -15,9 +15,9 @@ export default {
         return (this.show) ? createElement('div', {
             class: 'modal'
         }, [
-            createElement('p', {
-                class: 'message'
-            }, this.message),
+            createElement('div', {
+                class: 'content'
+            }, this.$slots.default),
             createElement('button', {
                 class: 'btn',
                 on: {
