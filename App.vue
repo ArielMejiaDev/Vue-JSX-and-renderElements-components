@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <button @click.prevent="toggleHandler">Toggle Modal</button>
-    <modal-create-element :show="show" message="Hello World!!!">
+    <!-- <modal-create-element :show="show" message="Hello World!!!">
       <h1>Modal title</h1>
       <p>Hello World from create element.</p>
-    </modal-create-element>
-    <!-- <modal-jsx :show="show" message="Hello World from JSX!!"></modal-jsx> -->
+    </modal-create-element> -->
+    <modal-jsx :show="show">
+      <h1>Modal title</h1>
+      <p>Hello World from JSX!!!</p>
+    </modal-jsx>
   </div>
 </template>
 
 <script>
-import ModalCreateElement from './ModalCreateElement.vue'
-// import ModalJsx from './ModalJsx'
+// import ModalCreateElement from './ModalCreateElement.vue'
+import ModalJsx from './ModalJsx'
 
 export default {
   name: 'App',
@@ -21,8 +24,8 @@ export default {
     }
   },
   components : {
-    ModalCreateElement,
-    // ModalJsx
+    // ModalCreateElement,
+    ModalJsx
   },
   methods: {
     toggleHandler() {

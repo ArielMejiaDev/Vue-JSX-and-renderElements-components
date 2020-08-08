@@ -6,14 +6,14 @@ export default {
             type: Boolean,
             default: false
         },
-        message: {
-            type: String,
-            required: true
-        }
+        // message: {
+        //     type: String,
+        //     required: true
+        // }
     },
     render() {
         return (this.show) ? <div class="modal">
-            <p class="message">{this.message}</p>
+            <p class="message">{this.$slots.default}</p>
             <button onClick={this.clickCancelHandler} class="btn">Cancel</button>
             <button onClick={this.clickOkHandler} class="btn">Ok</button>
         </div> : null
